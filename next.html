@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Register</title>
+    <!-- Link to Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS styles */
+        /* Add your custom styles here */
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Flash cards -->
+    <div id="flashCards" class="container mx-auto py-8">
+        <div id="flashCard1" class="flash-card">
+            <img src="C:\\Projects\\runn-removebg-preview.png" alt="Slide 1" class="w-full h-auto rounded-lg">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Track Your Goal</h2>
+                <p class="text-gray-600">Don’t worry if you have trouble determining your goals, We can help you determine your goals and track your goals</p>
+            </div>
+        </div>
+
+        <div id="flashCard2" class="flash-card hidden">
+            <img src="C:\\Projects\\cycle-removebg-preview.png" alt="Slide 2" class="w-full h-auto rounded-lg">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold mb-2">Get Burn</h2>
+                <p class="text-gray-600">Let’s keep burning to achieve your goals, it hurts only temporarily, if you give up now you will be in pain forever</p>
+            </div>
+        </div>
+
+        <!-- Skip button -->
+        <a href="#" id="skipButton" class="text-gray-500 absolute top-0 right-0 m-4">Skip</a>
+    </div>
+
+    <!-- Registration form -->
+    <div id="registerForm" class="container mx-auto py-8 hidden">
+        <h1 class="text-3xl font-bold text-center mb-8">Register</h1>
+        <form class="w-full max-w-sm mx-auto">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="firstName">
+                    First Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="firstName" type="text" placeholder="Enter your first name">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+                    Last Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastName" type="text" placeholder="Enter your last name">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="emailRegister">
+                    Email
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="emailRegister" type="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="passwordRegister">
+                    Password
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="passwordRegister" type="password" placeholder="Enter your password">
+            </div>
+            <div class="mb-4">
+                <label class="flex items-center">
+                    <input type="checkbox" class="form-checkbox">
+                    <span class="ml-2 text-gray-700">By proceeding, I agree to all T&C and Privacy Policy</span>
+                </label>
+            </div>
+            <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                Create an Account
+            </button>
+        </form>
+
+        <!-- Or section -->
+        <div class="text-center mt-4">
+            <p class="text-gray-700">Or</p>
+            <div class="mt-2">
+                <!-- Social login buttons -->
+                <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-full mr-2">
+                    <img src="C:\\Projects\\images-removebg-preview.png" alt="Facebook Logo" class="h-4 w-4 inline-block mr-2">
+                </button>
+                <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full ml-2">
+                    <img src="C:\\Projects\\google_logo_icon_134448-removebg-preview.png" alt="Google Logo" class="h-4 w-4 inline-block mr-2">
+                </button>
+            </div>
+        </div>
+
+        <!-- Already have an account? Login -->
+        <div class="text-center mt-4">
+            <p class="text-gray-700">Already have an account? <a href="#" id="loginLink">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Login form -->
+    <div id="loginForm" class="container mx-auto py-8 hidden">
+        <h1 class="text-3xl font-bold text-center mb-8">Welcome Back</h1>
+        <form class="w-full max-w-sm mx-auto">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="emailLogin">
+                    Email
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="emailLogin" type="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="passwordLogin">
+                    Password
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="passwordLogin" type="password" placeholder="Enter your password">
+            </div>
+            <button class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                Sign In
+            </button>
+        </form>
+
+        <!-- Or section -->
+        <div class="text-center mt-4">
+            <p class="text-gray-700">Or</p>
+            <div class="mt-2">
+                <!-- Social login buttons -->
+                <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-full mr-2">
+                    <img src="C:\\Projects\\images-removebg-preview.png" alt="Facebook Logo" class="h-4 w-4 inline-block mr-2">
+                </button>
+                <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full ml-2">
+                    <img src="C:\\Projects\\google_logo_icon_134448-removebg-preview.png" alt="Google Logo" class="h-4 w-4 inline-block mr-2">
+                </button>
+            </div>
+        </div>
+
+        <!-- Don't have an account yet? Create an account -->
+        <div class="text-center mt-4">
+            <p class="text-gray-700">Don't have an account yet? <a href="#" id="registerLink">Create an account</a></p>
+        </div>
+    </div>
+
+    <!-- Workout Tracker page -->
+    <div id="workoutTracker" class="container mx-auto py-8 hidden">
+        <h1 class="text-3xl font-bold text-center mb-8">Workout Tracker</h1>
+        <!-- Add your content for the Workout Tracker page here -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="workout-card bg-white p-4 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold mb-2">Weight Loss</h2>
+                <p class="text-gray-600">Good job! Less than 320 calories burned today.</p>
+                <p class="text-gray-600">900 calories to go!</p>
+            </div>
+            <!-- Add more workout cards here -->
+        </div>
+    </div>
+
+    <!-- Workout Schedule page -->
+    <div id="workoutSchedule" class="container mx-auto py-8 hidden">
+        <h1 class="text-3xl font-bold text-center mb-8">Workout Schedule</h1>
+        <!-- Add your content for the Workout Schedule page here -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="workout-card bg-white p-4 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold mb-2">Sunday, 5th Feb 2024</h2>
+                <p class="text-gray-600">6:00 AM - Ab Workout</p>
+                <p class="text-gray-600">7:30 AM - Upperbody Workout</p>
+            </div>
+            <!-- Add more workout schedule cards here -->
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // JavaScript code for handling interactions
+        const skipButton = document.getElementById('skipButton');
+        const flashCard1 = document.getElementById('flashCard1');
+        const flashCard2 = document.getElementById('flashCard2');
+        const registerForm = document.getElementById('registerForm');
+        const loginForm = document.getElementById('loginForm');
+        const loginLink = document.getElementById('loginLink');
+        const registerLink = document.getElementById('registerLink');
+        const workoutTracker = document.getElementById('workoutTracker');
+        const workoutSchedule = document.getElementById('workoutSchedule');
+
+        skipButton.addEventListener('click', function() {
+            // Hide current flash card
+            if (!flashCard1.classList.contains('hidden')) {
+                flashCard1.classList.add('hidden');
+                flashCard2.classList.remove('hidden');
+            } else {
+                // Hide second flash card and show register form
+                flashCard2.classList.add('hidden');
+                registerForm.classList.remove('hidden');
+            }
+        });
+
+        loginLink.addEventListener('click', function() {
+            // Hide flash cards and register form, show login form
+            flashCard1.classList.add('hidden');
+            flashCard2.classList.add('hidden');
+            registerForm.classList.add('hidden');
+            loginForm.classList.remove('hidden');
+        });
+
+        registerLink.addEventListener('click', function() {
+            // Hide flash cards and login form, show register form
+            flashCard1.classList.add('hidden');
+            flashCard2.classList.add('hidden');
+            loginForm.classList.add('hidden');
+            registerForm.classList.remove('hidden');
+        });
+
+        // Additional JavaScript for Workout Tracker and Workout Schedule pages can be added here
+    </script>
+
+</body>
+</html>
